@@ -19,16 +19,16 @@
 
         </div>
         <div class="pl-4">
-            <input type="color" class="pr-48" >
+            <input id="color" type="color" class="pr-48" >
         </div>
         
     </div>
     <div class="flex justify-center pt-4">
         <p class=" text-xl font-bold">Brushing</p>
-        <input type="number" class="border-4">
+        <input  id="size" type="number" class="border-4">
     </div>
     <div class="flex justify-center">
-        <p>clear canvas</p>
+        <p id="clear">clear canvas</p>
         <div class="pl-5">
             <button class="border-4">clear</button>
         </div>
@@ -38,6 +38,41 @@
     </div>
 </body>
 <script>
-    const canvas
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    canvas.addEventListener("mousedown", (e) => {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    canvas.addEventListener("mousemove", draw);
+
+    canvas.addEventListener("mouseup", () => (isDrawing = false));
+    canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+    function draw(e) {
+      if (!isDrawing) return;
+
+      context.strokeStyle = document.getElementById("color").value;
+      context.lineWidth = document.getElementById("size").value;
+      context.lineCap = "round";
+
+      context.beginPath();
+      context.moveTo(lastX, lastY);
+      context.lineTo(e.offsetX, e.offsetY);
+      context.stroke();
+
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    function clearCanvas() {
+        const clearButton = document.getElementById("clearButton");
+clearButton.addEventListener("click", clearCanvas);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    }
 </script>
 </html>
