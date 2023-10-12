@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="stylesheet" href="./index.js">
+</head>
+<body class="">
+    <div class="pl-72 pt-36 pr-48 ">
+        <div class="border-4 ">
+
+            <div class="flex pb-2 pl-32 pt-16 ">
+                <label for="">Enter first number</label>
+                <div class="pl-10">
+    
+                    <input id="num1" type="number" class=" border-4 ">
+                </div>
+            </div>
+            
+            
+            <div class="flex pl-32  pt-2 pb-5">
+                <label for="">Enter second number</label>
+                <div class="pl-4 ">
+    
+                    <input id="num2" type="number" class="border-4 ">
+                </div>
+            </div>
+            <div class="pl-36 ">
+
+                <button  onclick="add()" class="border-4">Addition</button>
+                <button onclick="sub()" class="border-4">Subtration</button>
+                <button onclick="mul()"class="border-4">Multiplication</button>
+                <button onclick="div()"class="border-4">Division</button>
+            </div>
+            <div class="pt-3 pb-3">
+                <div class="pl-52 ">
+                    <div class="flex">
+
+                        <p class="font-bold text-xl">Result:</p>
+                        <p id="result"  class=""></p> 
+                    </div>
+                </div>
+    
+                
+            </div>
+        </div>
+    </div>    
+
+
+<script>
+    function add()
+    {
+
+        let a=parseInt(document.getElementById("num1").value)
+        let b=parseInt(document.getElementById("num2").value)
+        let c=a+b
+        console.log(c)
+        document.getElementById("result").innerHTML=+c
+    }
+    function sub()
+    {
+
+        let a=parseInt(document.getElementById("num1").value)
+        let b=parseInt(document.getElementById("num2").value)
+        let c=a-b
+        console.log(c)
+        document.getElementById("result").innerHTML="result:"+c
+    }
+
+    function mul()
+    {
+
+        let a=parseInt(document.getElementById("num1").value)
+        let b=parseInt(document.getElementById("num2").value)
+        let c=a*b
+        console.log(c)
+        document.getElementById("result").innerHTML="result:"+c
+    }
+
+    function div()
+    {
+
+        let a=parseInt(document.getElementById("num1").value)
+        let b=parseInt(document.getElementById("num2").value)
+        let c=a/b
+        console.log(c)
+        document.getElementById("result").innerHTML="result:"+c
+        
+    }
+
+
+</script>
+</body>
+</html>
