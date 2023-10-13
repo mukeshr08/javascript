@@ -25,12 +25,12 @@
     </div>
     <div class="flex justify-center pt-4">
         <p class=" text-xl font-bold">Brushing</p>
-        <input  id="size" type="number" class="border-4">
+        <input  id="size" type="number" value="5" class="border-4">
     </div>
     <div class="flex justify-center">
         <p id="clear">clear canvas</p>
         <div class="pl-5">
-            <button class="border-4">clear</button>
+            <button class="border-4" onClick="clearCanvas()">clear</button>
         </div>
        
     </div>
@@ -43,10 +43,11 @@
     let isDrawing = false;
     let lastX = 0;
     let lastY = 0;
+    let lastz=0;
 
     canvas.addEventListener("mousedown", (e) => {
       isDrawing = true;
-      [lastX, lastY] = [e.offsetX, e.offsetY];
+      [lastX, lastY,lastz] = [e.offsetX, e.offsetY];
     });
 
     canvas.addEventListener("mousemove", draw);
@@ -70,8 +71,7 @@
     }
 
     function clearCanvas() {
-        const clearButton = document.getElementById("clearButton");
-clearButton.addEventListener("click", clearCanvas);
+
       context.clearRect(0, 0, canvas.width, canvas.height);
     }
 </script>
