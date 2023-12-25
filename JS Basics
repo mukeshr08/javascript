@@ -1,0 +1,18 @@
+//alert(" learn js ")
+console.log("hi hello vanakkam");
+console.log(12345678);
+console.log(12.5);
+console.log(true);
+console.log([3,55,676,46,363,5343])
+console.log({famne:"mukesh",age:18});
+console.table({famne:"mukesh",age:18});
+console.error("error detected");
+console.warn("error detected");
+console.clear();
+console.time("mukesh");
+for(i=0;i<=5;i++)
+{
+
+    console.log(i);
+}
+console.timeEnd("mukesh");
