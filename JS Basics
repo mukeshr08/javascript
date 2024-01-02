@@ -1,68 +1,43 @@
-// VAR keyword
-//1.var - global scope
-var a=15;
-{
+//Dynamic languge a=25 not use in int a=25
+/**
+ * primitive data type
+ Number eg:23,45
+ Boolean eg: true,false
+ Null 
+ Undefined eg: int a
+ symbols E6
 
-    var b=45;
-}
-console.log(a+b)
-// 2.Redeclaration 
-var g=25;
-console.log(g)
-var g=45;
-console.log(g)
-//3.Reassign
-var j=25;
-console.log(j)
-j=45;
-console.log(j)
+ Reference type
+ Array
+ object literals
+ function
+ date 
+ */
 
+ var a=25;
+ var b=15.3
+ console.log(typeof a)
+ console.log(typeof b)
+ var fname= "mukesh"
+ console.log(typeof fname)
+ var isNumber=true;
+ console.log(typeof isNumber)
+ var c=null
+ console.log(typeof c)
+ var d;
+ console.log(d)
 
+//  symbols - unique value used in objects
+const e1=Symbol()
+console.log(e1)
+const e2=Symbol()
+console.log(e2)
+console.log(e1==e2)
 
-
-// LET keyword
-
-// let- 1.local scope 
-//  let c=15;
-// {
-
-//     let d=45;
-// }
-// console.log(c+d)
-// 2.Redeclaration not be executed 
-// let h=25;
-// console.log(h)
-// let h=45;
-// console.log(h)
-// 3.Reassign 
-let k=25;
-console.log(k)
-k=45;
-console.log(k)
-
-
-// CONST keyword
-// const - 1.local scope 
-// const e=15;
-// {
-
-//     const f=45;
-// }
-// console.log(e+f)
-// 2.2.Redeclaration not be executed 
-// const i=25;
-// console.log(i)
-// const i=45;
-// console.log(i)
-// 3.Reassign not be executed in variable but not in objects
-// const l=25;
-// console.log(l)
-// l=45;
-// console.log(l)
-// IN Objects
-const student = {'name':"mukesh","age":18};
-console.log(student)
-console.table(student)
-student.name="vinoth"
-console.log(student)
-console.table(student)
+// Reference type
+var courses=['c','c++','python']
+console.log(typeof courses)
+var student={'name':"mukesh","age":18}
+console.log(typeof student)
+var d=new Date();
+console.log( d)
