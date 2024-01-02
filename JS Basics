@@ -1,18 +1,68 @@
-//alert(" learn js ")
-console.log("hi hello vanakkam");
-console.log(12345678);
-console.log(12.5);
-console.log(true);
-console.log([3,55,676,46,363,5343])
-console.log({famne:"mukesh",age:18});
-console.table({famne:"mukesh",age:18});
-console.error("error detected");
-console.warn("error detected");
-console.clear();
-console.time("mukesh");
-for(i=0;i<=5;i++)
+// VAR keyword
+//1.var - global scope
+var a=15;
 {
 
-    console.log(i);
+    var b=45;
 }
-console.timeEnd("mukesh");
+console.log(a+b)
+// 2.Redeclaration 
+var g=25;
+console.log(g)
+var g=45;
+console.log(g)
+//3.Reassign
+var j=25;
+console.log(j)
+j=45;
+console.log(j)
+
+
+
+
+// LET keyword
+
+// let- 1.local scope 
+//  let c=15;
+// {
+
+//     let d=45;
+// }
+// console.log(c+d)
+// 2.Redeclaration not be executed 
+// let h=25;
+// console.log(h)
+// let h=45;
+// console.log(h)
+// 3.Reassign 
+let k=25;
+console.log(k)
+k=45;
+console.log(k)
+
+
+// CONST keyword
+// const - 1.local scope 
+// const e=15;
+// {
+
+//     const f=45;
+// }
+// console.log(e+f)
+// 2.2.Redeclaration not be executed 
+// const i=25;
+// console.log(i)
+// const i=45;
+// console.log(i)
+// 3.Reassign not be executed in variable but not in objects
+// const l=25;
+// console.log(l)
+// l=45;
+// console.log(l)
+// IN Objects
+const student = {'name':"mukesh","age":18};
+console.log(student)
+console.table(student)
+student.name="vinoth"
+console.log(student)
+console.table(student)
