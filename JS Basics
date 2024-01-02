@@ -1,43 +1,89 @@
-//Dynamic languge a=25 not use in int a=25
-/**
- * primitive data type
- Number eg:23,45
- Boolean eg: true,false
- Null 
- Undefined eg: int a
- symbols E6
+//type conversion 
+//all data types into string type
+let a=25;
+console.log(a,typeof a);
+a=String(a);
+//in string S is capital
+console.log(a,typeof a);
 
- Reference type
- Array
- object literals
- function
- date 
- */
+let b=25.3;
+console.log(b,typeof b);
+b=String(b);
+console.log(b,typeof b)
 
- var a=25;
- var b=15.3
- console.log(typeof a)
- console.log(typeof b)
- var fname= "mukesh"
- console.log(typeof fname)
- var isNumber=true;
- console.log(typeof isNumber)
- var c=null
- console.log(typeof c)
- var d;
- console.log(d)
+let c=true;
+console.log(c,typeof c);
+c=String(c);
+console.log(c,typeof c)
 
-//  symbols - unique value used in objects
-const e1=Symbol()
-console.log(e1)
-const e2=Symbol()
-console.log(e2)
-console.log(e1==e2)
 
-// Reference type
-var courses=['c','c++','python']
-console.log(typeof courses)
-var student={'name':"mukesh","age":18}
-console.log(typeof student)
-var d=new Date();
-console.log( d)
+let f=new Date()
+console.log(f,typeof f)
+f=String(f);
+console.log(f,typeof f)
+
+let j=[1,2,3,4,5]
+console.log(j,typeof j)
+j=String(j);
+console.log(j,typeof j)
+
+let i=25;
+console.log(i,typeof i);
+i=i.toString();
+//in string S is capital
+console.log(i,typeof i);
+
+//string to number
+e="132"
+console.log(e,typeof e)
+e=Number(e);
+console.log(e,typeof e)
+
+//boolean to number
+f=true
+console.log(f,typeof f);
+f=Number(f)
+console.log(f,typeof f)
+
+//array to number is NaN
+k=[1,3,4,5,5]
+console.log(k,typeof k);
+k=Number(k)
+console.log(k,typeof k);
+
+//string to number  is NaN
+l="mukesh"
+console.log(l,typeof l);
+l=Number(l)
+console.log(l,typeof l);
+
+m="mukesh"
+console.log(m,typeof m);
+m=parseInt(m)
+console.log(m,typeof m);
+
+//string with number into number
+m="1324"
+console.log(m,typeof m);
+m=parseInt(m)
+console.log(m,typeof m);
+
+// string with float into number
+m="13.2354"
+console.log(m,typeof m);
+m=parseInt(m)
+console.log(m,typeof m);
+
+//string with float into floating number
+m="12.3432"
+console.log(m,typeof m);
+m=parseFloat(m)
+console.log(m,typeof m);
+
+
+
+
+
+
+
+
